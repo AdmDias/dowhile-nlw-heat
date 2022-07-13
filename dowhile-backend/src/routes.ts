@@ -14,6 +14,6 @@ router.post("/message", ensureAuthenticated, new CreateMessageController().handl
 
 router.get("/userProfile", ensureAuthenticated, new ProfileUserController().handle)
 
-router.get("/last3messages", new GetLast3MessagesController().handle)
+router.get("/messages/last3messages", new GetLast3MessagesController().handle)
 
 export { router }

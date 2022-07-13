@@ -3,8 +3,12 @@ module.exports = {
   content: ["./src/**/*.tsx"],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        custom: '1fr 453px'
+      },
       backgroundImage: {
-        blur: 'url(/src/assets/bg-blur.png)'
+        loginImage: 'url(/src/assets/bg-login-image.png)',
+        gradient: 'linear-gradient(100deg, #FF008E 0%, #FFCD1E 100%)'
       },
       fontFamily: {
         sans: 'Roboto, sans-serif'
@@ -18,8 +22,8 @@ module.exports = {
         blue: {
           500: '#81D8F7',
         },
-        orange: {
-          500: '#FBA94C',
+        yellow: {
+          400: '#FFCD1E',
         },
         red: {
           500: '#F75A68',
@@ -31,6 +35,7 @@ module.exports = {
           500: '#323238',
           600: '#29292E',
           700: '#121214',
+          800: '#1b1b1f',
           900: '#09090A'
         }
       },
