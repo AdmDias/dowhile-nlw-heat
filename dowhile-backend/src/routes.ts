@@ -16,4 +16,14 @@ router.get("/userProfile", ensureAuthenticated, new ProfileUserController().hand
 
 router.get("/messages/last3messages", new GetLast3MessagesController().handle)
 
+router.get("/github", (req, resp) => {
+    resp.redirect(`https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}`)
+})
+
+router.get("/signin/callback", (req, resp) => {
+    const { code } = req.query
+
+    return resp.json(code)
+})
+
 export { router }
